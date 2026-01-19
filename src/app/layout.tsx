@@ -12,9 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const firstName = process.env.NEXT_PUBLIC_FIRST_NAME || 'Your';
+const lastName = process.env.NEXT_PUBLIC_LAST_NAME || 'Name';
+const fullName = `${firstName} ${lastName}`;
+
 export const metadata: Metadata = {
-  title: "Interview Bot - Sandy McFadden",
-  description: "Ask questions about Sandy's experience and background",
+  title: `Interview Bot - ${fullName}`,
+  description: `Ask questions about ${firstName}'s experience and background`,
 };
 
 export default function RootLayout({

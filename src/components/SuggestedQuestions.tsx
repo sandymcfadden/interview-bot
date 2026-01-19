@@ -6,7 +6,6 @@ interface SuggestedQuestionsProps {
 }
 
 const SUGGESTED_QUESTIONS = [
-  "What's your experience with React?",
   "Tell me about a challenging project you worked on.",
   "What are you looking for in your next role?",
   "How do you approach problem-solving?",

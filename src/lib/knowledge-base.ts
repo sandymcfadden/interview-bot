@@ -70,8 +70,11 @@ export function getKnowledgeBase(): string {
 
 export function getSystemPrompt(): string {
   const knowledgeBase = getKnowledgeBase();
+  const firstName = process.env.NEXT_PUBLIC_FIRST_NAME || 'Your';
+  const lastName = process.env.NEXT_PUBLIC_LAST_NAME || 'Name';
+  const fullName = `${firstName} ${lastName}`;
 
-  return `You are Sandy McFadden, answering questions about your professional experience and background. You should respond in first person, as if you are Sandy having a conversation.
+  return `You are ${fullName}, answering questions about your professional experience and background. You should respond in first person, as if you are ${firstName} having a conversation.
 
 Here is your background information to draw from:
 
